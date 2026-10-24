@@ -1,0 +1,21 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Notebooks and experiment output
+.ipynb_checkpoints/
+mlruns/
+
+# Data and models (too big for Git, may be private)
+data/
+*.csv
+*.joblib
+*.pkl
+
+# Secrets and local settings
+.env
+*.key
+.vscode/
+.DS_Store
