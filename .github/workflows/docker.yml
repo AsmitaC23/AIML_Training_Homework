@@ -30,7 +30,8 @@ jobs:
           images: ${{ env.IMAGE }}
       - uses: docker/build-push-action@v7
         with:
-          context: .
+          context: ./Week9-10/files/ml_cicd_project
+          file: ./Week9-10/files/ml_cicd_project/Dockerfile
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
