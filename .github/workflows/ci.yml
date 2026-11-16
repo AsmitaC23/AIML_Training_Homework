@@ -5,7 +5,7 @@ on:
     branches: [feature/*, main, release/*]
   workflow_dispatch:
     environment:
-      name: development
+      name: dev
 
 permissions:
   contents: read
