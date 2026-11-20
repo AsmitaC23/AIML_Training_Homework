@@ -110,8 +110,9 @@ jobs:
       - name: Quality gate (minimum AUC)
         run: python scripts/check_metrics.py --min-auc 0.3
         if : success() # only run the quality gate check if the model training was successful
+        echo "Model quality gate passed."
         else:
-          echo: "model quality gate check failed"
+          echo "Model quality gate failed."
           exit 1
       - uses: actions/upload-artifact@v7
         with:
