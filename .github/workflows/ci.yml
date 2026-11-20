@@ -109,9 +109,7 @@ jobs:
         run: python -m src.train
       - name: Quality gate (minimum AUC)
         run: python scripts/check_metrics.py --min-auc 0.3
-        if : success()
-          echo "Model quality gate passed."
-
+      
       - uses: actions/upload-artifact@v7
         with:
           name: model
