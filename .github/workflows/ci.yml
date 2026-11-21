@@ -1,6 +1,4 @@
-
 name: Build_ML_model
-
 on:
   push:
     branches:
@@ -10,9 +8,14 @@ on:
       - "homework/**"
     tags:
       - "v*"
+
   pull_request:
     branches: [main]
+
   workflow_dispatch:
+
+  schedule:
+    - cron: "30 18 * * *"
 
 permissions:
   contents: read
