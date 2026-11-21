@@ -1,4 +1,3 @@
-
 import pytest
 
 from src.predict import SAMPLES, predict
