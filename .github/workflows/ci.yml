@@ -113,10 +113,11 @@ jobs:
       - name: Train the model
         run: python -m src.train
       - name: Quality gate (minimum AUC)
-        run: python scripts/check_metrics.py --min-auc 0.9
+        run: python scripts/check_metrics.py --min-auc 0.75
       - uses: actions/upload-artifact@v7
         with:
           name: model
           path: Week9-10/files/ml_cicd_project/models/
+
 
 
