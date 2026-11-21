@@ -8,6 +8,8 @@ on:
       - "feature/*"
       - "release/*"
       - "homework/**"
+    tags:
+      - "v*"
   pull_request:
     branches: [main]
   workflow_dispatch:
@@ -118,6 +120,8 @@ jobs:
         with:
           name: model
           path: Week9-10/files/ml_cicd_project/models/
+
+
 
 
 
