@@ -6,7 +6,7 @@ from src.train import MODEL_FILE, train
 
 def test_train_saves_model_and_predicts(tmp_path):
     info = train(tmp_path)
-    assert (tmp_path / MODEL_FILE).exists() and info["auc"] > 0.7
+    assert (tmp_path / MODEL_FILE).exists() and info["auc"] > 0.99
     risky, loyal = predict(SAMPLES, tmp_path)
     assert 0 <= loyal < risky <= 1
 
